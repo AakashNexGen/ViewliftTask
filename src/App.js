@@ -17,6 +17,9 @@ const App = () => {
       ? alert("Please fill all details")
       : usersData.push(userInfo);
     window.localStorage.setItem("local", JSON.stringify(usersData));
+    const localData = window.localStorage.getItem("local");
+    const fullData = JSON.parse(localData);
+    setLocalDataUser(fullData);
 
     setUserInfo({
       name: "",
