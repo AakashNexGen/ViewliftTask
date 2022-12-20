@@ -29,7 +29,7 @@ const App = () => {
     });
   };
   const updateuser = (id) => {
-    let data = usersData.filter((item, index) => {
+    let data = usersData?.filter((item, index) => {
       if (index === id) {
         return false;
       }
@@ -129,7 +129,7 @@ const App = () => {
         </div>
       </div>
       <div>
-        {localDataUser.length === 0 ? (
+        {localDataUser?.length === 0 ? (
           <></>
         ) : (
           <div className="dataOutput">
@@ -152,7 +152,7 @@ const App = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {localDataUser.filter((item)=>item.name.includes(searchData)).map((ele, i) => (
+                  {localDataUser?.filter((item)=>item.name.includes(searchData)).map((ele, i) => (
                     <tr>
                       <td>{i + 1}</td>
 
